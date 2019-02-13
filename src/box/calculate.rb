@@ -14,7 +14,7 @@
 
             end
             def calculate
-                @total_bricks = ( ( (@box_width + @box_depth)/@bricks_width)  -1) * ( @box_height / @bricks_height )
+                @total_bricks = ( ( (@box_width + @box_depth)/@bricks_width)  - 0.5) * ( @box_height / @bricks_height )
             end
 
             def get_total
@@ -23,6 +23,6 @@
 
         end
       end 
-    box = BoxBricks::Box.new(3000, 3000, 2000, 250, 120, 70)
+    box = BoxBricks::Box.new(500, 500, 500, 250, 120, 70)
     box.calculate
     puts box.get_total
