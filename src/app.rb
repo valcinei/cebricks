@@ -24,4 +24,5 @@ module HelloCube
     end  
   end # module   HelloCube
 cube = HelloCube::create_cube
+end
 
