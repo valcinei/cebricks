@@ -1,4 +1,15 @@
     module BoxBricks
+        class Bick          
+            def initialize(bricks_width, bricks_height, bricks_depth)
+                @bricks_width = bricks_width        
+                @bricks_depth= bricks_depth       
+                @bricks_height = bricks_height        
+
+            end
+
+
+        end
+
         class Box
             
             @total_bricks
@@ -23,6 +34,7 @@
 
         end
       end 
+
     box = BoxBricks::Box.new(500, 500, 500, 250, 120, 70)
     box.calculate
     puts box.get_total
