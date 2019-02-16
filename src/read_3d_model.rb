@@ -1,3 +1,5 @@
+require 'sketchup.rb'
+
 mod = Sketchup::active_model
 url = "/Users/valcinei.silva/Documents/Projects/Personal/eco-bricks/3d-models/tijolo+ecologico.skp"
 cdef = mod.definitions.load_from_url(url)
