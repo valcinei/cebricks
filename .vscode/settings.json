@@ -1,4 +1,5 @@
 {
     "workbench.iconTheme": "vscode-great-icons",
-    "workbench.colorTheme": "Darcula"
+    "workbench.colorTheme": "Darcula",
+    "solargraph.diagnostics": true
 }
