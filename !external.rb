@@ -2,7 +2,7 @@ SOURCE = File.join(ENV["HOME"], "Source").freeze
 
 paths = [
   "#{SOURCE}/src",
-  "/Users/valcinei.silva/Documents/Projects/Personal/eco-bricks"
+  "/Users/valcinei.silva/Documents/Projects/Personal/eco-bricks/src"
   # Add more as needed here...
 ]
 
