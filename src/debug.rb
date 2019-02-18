@@ -6,6 +6,7 @@ module Debug
   # Reload extension by running this method from the Ruby Console:
   #   Example::HelloWorld.reload
   def self.reload
+    UI.messagebox "Reloaded"
     original_verbose = $VERBOSE
     $VERBOSE = nil
     pattern = File.join(__dir__, '**/*.rb')
