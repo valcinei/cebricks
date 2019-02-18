@@ -29,7 +29,6 @@
 
           def create()
             calculate
-            UI.messagebox @bricks_qty
             for i in 0 .. @bricks_qty-1
               model = Sketchup.active_model
               model.start_operation('Create Cube', true)
