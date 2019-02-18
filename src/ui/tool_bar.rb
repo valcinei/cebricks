@@ -15,7 +15,8 @@ reload.menu_text = "Bricks"
 toolbar = toolbar.add_item reload
 
 brick_line_calculate = UI::Command.new("Bricks") {
-    BricksLine::Wall.new()
+  wall = BricksLine::Wall.new(2500);
+  wall.create;
 }
 
 brick_line_calculate.small_icon = "../assets/bricks-icon.png"
