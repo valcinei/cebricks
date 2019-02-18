@@ -36,9 +36,9 @@
               entities = group.entities
               points = [
                 Geom::Point3d.new(0+100*i, 0, 0),
-                Geom::Point3d.new("#{@brick_heigth}.mm", 0, 0),
-                Geom::Point3d.new("#{@brick_width}.mm", "#{@brick_deph}.mm",0),
-                Geom::Point3d.new(0, "#{@brick_deph}.mm", 0)
+                Geom::Point3d.new( @brick_heigth.mm, 0, 0),
+                Geom::Point3d.new( @brick_width.mm, @brick_deph.mm,0),
+                Geom::Point3d.new(0, @brick_deph.mm, 0)
               ]
               face = entities.add_face(points)
         
