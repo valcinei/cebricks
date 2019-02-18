@@ -42,7 +42,7 @@
               ]
               face = entities.add_face(points)
         
-              face.pushpull(@brick_heigth.mm)
+              face.pushpull(-@brick_heigth.mm)
         
               model.commit_operation
 
