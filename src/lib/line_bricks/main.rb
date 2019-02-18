@@ -29,20 +29,21 @@
 
           def create()
             calculate
-            for i in 0 .. @bricks_qty
+            UI.messagebox @bricks_qty
+            for i in 0 .. @bricks_qty-1
               model = Sketchup.active_model
               model.start_operation('Create Cube', true)
               group = model.active_entities.add_group
               entities = group.entities
               points = [
-                Geom::Point3d.new(0+100*i, 0, 0),
-                Geom::Point3d.new( @brick_heigth.mm, 0, 0),
-                Geom::Point3d.new( @brick_width.mm, @brick_deph.mm,0),
-                Geom::Point3d.new(0, @brick_deph.mm, 0)
+                Geom::Point3d.new(i * @brick_width.mm, 0, 0),
+                Geom::Point3d.new((i *  @brick_width.mm) + @brick_width.mm, 0, 0),
+                Geom::Point3d.new((i *  @brick_width.mm) + @brick_width.mm , 125.mm, 0),
+                Geom::Point3d.new(i * @brick_width.mm, 125.mm, 0)
               ]
               face = entities.add_face(points)
         
-              face.pushpull(-1.m)
+              face.pushpull(@brick_heigth.mm)
         
               model.commit_operation
 
