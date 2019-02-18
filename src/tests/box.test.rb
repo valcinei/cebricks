@@ -1,6 +1,5 @@
-require "test/unit"
  
-require_relative "../box/calculate"
+require_relative "../lib/box/calculate"
 class TestBoxBricks < Test::Unit::TestCase
  
   def test_calc_bricks_count
