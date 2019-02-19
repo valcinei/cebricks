@@ -10,6 +10,7 @@
               @bricks_qty = 0
 
             end
+          
           def get_selecteds_edges()
             selection = Sketchup.active_model.selection
             start_pos = selection[0].start.position
@@ -18,17 +19,14 @@
             @width = @edge_distance
             UI.messagebox(@width)
           end
-          def calculate()
-            
-            get_selecteds_edges
 
-            @bricks_qty = @width/@brick_width
+          def calculate(width=@width)
+
+            @bricks_qty = width/@brick_width
             return @bricks_qty
           end
 
           def create()
-            get_selecteds_edges
-            calculate
             for i in 0 .. @bricks_qty-1
               model = Sketchup.active_model
               model.start_operation('Create Cube', true)
