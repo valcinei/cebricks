@@ -15,7 +15,7 @@ reload.menu_text = "Bricks"
 toolbar = toolbar.add_item reload
 
 brick_line_calculate = UI::Command.new("Bricks") {
-  wall = BricksLine::Wall.new(2500);
+  wall = BricksLine::Wall.new();
   wall.create;
 }
 

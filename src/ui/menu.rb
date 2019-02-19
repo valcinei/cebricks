@@ -1,7 +1,8 @@
 require 'sketchup.rb'
 
 UI.menu("Window").add_item("Bricks Calculate"){
-  ::Draw.create_cube
+  wall = BricksLine::Wall.new();
+  wall.create;
 }
 UI.menu("Window").add_item("Reload") {
   ::Debug.reload

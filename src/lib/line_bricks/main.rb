@@ -3,31 +3,31 @@
    module BricksLine
         class Wall
             
-            def initialize(width)
+            def initialize()
               @brick_heigth = 70
               @brick_width = 250
               @brick_deph = 125
-              @width = width
               @bricks_qty = 0
-            
-              @edge = Sketchup.active_model.entities.add_line([0,0,0],[@width,0,0])
-              # Returns a 3D ray
-              @line = @edge.line
-            
-              if (@line)
-                UI.messagebox @line
-              else
-                UI.messagebox "Failure"
-              end
 
             end
-
+          def get_selecteds_edges()
+            selection = Sketchup.active_model.selection
+            start_pos = selection[0].start.position
+            end_pos = selection[0].end.position
+            @edge_distance = end_pos.distance(start_pos)
+            @width = @edge_distance
+            UI.messagebox(@width)
+          end
           def calculate()
+            
+            get_selecteds_edges
+
             @bricks_qty = @width/@brick_width
             return @bricks_qty
           end
 
           def create()
+            get_selecteds_edges
             calculate
             for i in 0 .. @bricks_qty-1
               model = Sketchup.active_model
