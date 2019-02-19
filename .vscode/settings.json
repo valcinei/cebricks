@@ -1,5 +1,6 @@
 {
     "workbench.iconTheme": "vscode-great-icons",
     "workbench.colorTheme": "Darcula",
-    "solargraph.diagnostics": true
+    "solargraph.diagnostics": true, 
+    "ruby.rubocop.onSave": true
 }

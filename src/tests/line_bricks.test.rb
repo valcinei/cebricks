@@ -14,5 +14,11 @@ class TestBoxBricks < Test::Unit::TestCase
 
     assert_equal(10, line.calculate(2500))
   end
+
+  def test_edge_is_diagonal
+    line = BricksLine::Wall.new()
+    
+    assert_equal(true, line.is_diagonal(1, 1, 1, 1, 1, 1))
+  end
  
 end
