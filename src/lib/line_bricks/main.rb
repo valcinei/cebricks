@@ -44,7 +44,7 @@ module BricksLine
         end
         def is_diagonal(x_a, y_a, z_a, x_b, y_b, z_b )
 
-          return true
+          return x_a != x_b && y_a != y_b
         end
       end
   end
